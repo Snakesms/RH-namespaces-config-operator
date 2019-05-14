@@ -490,6 +490,19 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:0750110d79897ac7ae955151a3e5f36a254565abfc9059abf184e1bed4dd14f2"
+  name = "github.com/redhat-cop/namespace-configuration-operator"
+  packages = [
+    "pkg/apis",
+    "pkg/apis/redhatcop/v1alpha1",
+    "pkg/controller",
+    "pkg/controller/namespaceconfig",
+  ]
+  pruneopts = "NT"
+  revision = "a85b86d46c3fe04e75e5bf6558531ab53e34efb2"
+
+[[projects]]
+  branch = "master"
   digest = "1:91cf094b4ea04f71937657d55aeaa57d5757ccc49d6e4bda946987bb6c5a2eb0"
   name = "github.com/redhat-cop/operator-utils"
   packages = ["pkg/util"]
@@ -1115,6 +1128,10 @@
     "github.com/operator-framework/operator-sdk/pkg/metrics",
     "github.com/operator-framework/operator-sdk/pkg/restmapper",
     "github.com/operator-framework/operator-sdk/version",
+    "github.com/redhat-cop/namespace-configuration-operator/pkg/apis",
+    "github.com/redhat-cop/namespace-configuration-operator/pkg/apis/redhatcop/v1alpha1",
+    "github.com/redhat-cop/namespace-configuration-operator/pkg/controller",
+    "github.com/redhat-cop/namespace-configuration-operator/pkg/controller/namespaceconfig",
     "github.com/redhat-cop/operator-utils/pkg/util",
     "github.com/spf13/pflag",
     "k8s.io/api/core/v1",
@@ -1129,6 +1146,7 @@
     "k8s.io/client-go/dynamic",
     "k8s.io/client-go/plugin/pkg/client/auth",
     "k8s.io/client-go/rest",
+    "k8s.io/client-go/tools/record",
     "k8s.io/code-generator/cmd/client-gen",
     "k8s.io/code-generator/cmd/conversion-gen",
     "k8s.io/code-generator/cmd/deepcopy-gen",
@@ -1140,8 +1158,10 @@
     "sigs.k8s.io/controller-runtime/pkg/client",
     "sigs.k8s.io/controller-runtime/pkg/client/config",
     "sigs.k8s.io/controller-runtime/pkg/controller",
+    "sigs.k8s.io/controller-runtime/pkg/event",
     "sigs.k8s.io/controller-runtime/pkg/handler",
     "sigs.k8s.io/controller-runtime/pkg/manager",
+    "sigs.k8s.io/controller-runtime/pkg/predicate",
     "sigs.k8s.io/controller-runtime/pkg/reconcile",
     "sigs.k8s.io/controller-runtime/pkg/runtime/log",
     "sigs.k8s.io/controller-runtime/pkg/runtime/scheme",
